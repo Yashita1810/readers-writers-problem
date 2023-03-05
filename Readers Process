@@ -5,6 +5,7 @@ signal(rd_mutex);
 if(rd_count==1){
 wait(wrt_mutex);
 }
+//critical section
 //performs reading
 wait(rd_mutex);
 rd_count--;
