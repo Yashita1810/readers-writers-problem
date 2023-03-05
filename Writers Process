@@ -1,0 +1,6 @@
+wait(mutex);
+wait(wrt_mutex);
+//critical section
+//performs writing
+signal(wrt_mutex);
+signal(mutex);
