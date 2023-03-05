@@ -1,0 +1,15 @@
+wait(mutex);
+wait(rd_mutex);
+rd_count++;
+signal(rd_mutex);
+if(rd_count==1){
+wait(wrt_mutex);
+}
+//performs reading
+wait(rd_mutex);
+rd_count--;
+signal(rd_mutex);
+if(rd_count==0){
+signal(wrt_count);
+}
+signal(mutex);
