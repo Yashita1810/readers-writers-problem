@@ -1,0 +1,4 @@
+Initialize rd_count=0;  //to keep the count of readers
+           wrt_mutex=1; //mutual exclusion semaphore for writers
+           rd_mutex=1; //mutual exclusion semaphore for updating rd_count
+           mutex=1;//mutual exclusion semaphore for entry of readers and writers
