@@ -12,6 +12,6 @@ wait(rd_mutex);
 rd_count--;
 signal(rd_mutex);
 if(rd_count==0){
-signal(wrt_count);
+signal(wrt_mutex);
 }
 
